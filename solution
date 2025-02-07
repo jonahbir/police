@@ -1,0 +1,17 @@
+def Police_Recruits(chronology):
+    police=0
+    untreated=0
+    for i in chronology:
+        
+        if i==-1:
+            if police>0:
+                police-=1
+            else:
+                untreated+=1
+            
+        else:
+            police+=i
+    return untreated
+num=int(input())
+chro=list(map(int,input().split()))
+print(Police_Recruits(chro))
